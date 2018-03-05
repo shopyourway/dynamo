@@ -1,0 +1,20 @@
+{
+  "eventDefinitions": {
+    "actionsList": [
+      "Add To Catalog"
+    ]
+  },
+  "definitions": {
+    "addToCatalog": {
+      "parameters": {
+        "entityType": "string"
+      },
+      "dimensions": {
+        "eventAction": "Add To Catalog",
+        "entityType": "{{entityType}}"
+      },
+      "metrics": [ "engagementMetric", "addToCatalogMetric" ],
+      "eventType": "event"
+    }
+  }
+}

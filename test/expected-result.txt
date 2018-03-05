@@ -1,0 +1,21 @@
+import bla from './bla;
+
+export var actions = {
+  "addToCatalog": "Add To Catalog"
+  };
+var actionsValues = {
+  "Add To Catalog": 1
+  };
+
+export function addToCatalog(entityType) {
+  const eventData = {};
+
+  eventData.eventAction = `Add To Catalog`;
+  eventData.entityType = `${entityType}`;
+  eventData.engagementMetric = `1`;
+  eventData.addToCatalogMetric = `1`;
+  tagManagerReporter.link(eventData);
+};
+
+export function myDummyFunction() {
+}
