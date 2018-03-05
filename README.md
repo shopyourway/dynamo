@@ -89,7 +89,7 @@ export function addToCatalog(entityType) {
   tagManagerReporter.link(eventData);
 }
 ```
-With new file you can
+With the new file you can
 ```js
 myGeneratedAnalytics.addToCatalog('Product');
 ```
