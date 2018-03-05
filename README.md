@@ -9,7 +9,7 @@ ga('send', 'event', 'Catalogs', 'Add', {
 'metric1': 1});
 ``` 
 Working that way is hard to keep your analytics aligned between all platforms and feature in your organization.
-Dynamo is currently converts a json file into a JS API. In the future it will also supports other languges.
+Currently Dynamo support generation a JS API from an input json file. In the future it will also supports other languges.
  
 Using this json file you will be able to have 1 business language for your business analytics.
 You can create this json file through your CMS system for example and give the ability for PM / data analyst to define the analytics that your product needs to report.
