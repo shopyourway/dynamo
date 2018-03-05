@@ -67,7 +67,7 @@ Suppose you have the following JSON file:
 }
 ```
 The output will be:
-```js
+```javascript
 import bla from './bla;
 
 export var actions = {
