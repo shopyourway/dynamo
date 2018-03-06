@@ -68,16 +68,14 @@ Suppose you have the following JSON file:
 ```
 The output will be:
 ```javascript
-import bla from './bla';
+import tagManagerReporterfrom './tag-manager-reporter';
 
 export var actions = {
-  "like": "Like",
-  "goToDownloadApp": "Go To Download App"
-  };
+  "addToCatalog": "Add To Catalog"
+};
 var actionsValues = {
-  "Like": 1,
-  "Go To Download App": 1
-  };
+  "Add To Catalog": 1
+};
 
 export function addToCatalog(entityType) {
   const eventData = {};
