@@ -4,7 +4,8 @@ const camelCase = require('camel-case');
 module.exports = function(metadata, settings) {
   let importStatements = settings.importStatements ? settings.importStatements : '';
   let footerFileContent = settings.footerFile ? fs.readFileSync(`${settings.footerFile}`, 'utf8') : '';
-  return `${importStatements}
+  return `/*THIS IS AN AUTO GENERATED FILE CREATED BY Dynamo https://github.com/shopyourway/dynamo*/
+${importStatements}
 
 ${setDeclarations('actions', metadata.eventDefinitions.actionsList)}
 
