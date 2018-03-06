@@ -1,3 +1,4 @@
+/*THIS IS AN AUTO GENERATED FILE CREATED BY Dynamo https://github.com/shopyourway/dynamo*/
 import bla from './bla;
 
 export var actions = {
