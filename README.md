@@ -1,5 +1,5 @@
 # Dynamo
-![alt text](https://raw.githubusercontent.com/shopyourway/dynamo/master/logo.jpg)
+![alt text](https://raw.githubusercontent.com/shopyourway/dynamo/master/logo.png)
 
 Dynamo generates an analytics javascript API based on a json file definition.
 
