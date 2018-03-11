@@ -1,5 +1,5 @@
 # Dynamo
-![alt text](https://raw.githubusercontent.com/shopyourway/dynamo/master/logo.png)
+![alt text](https://raw.githubusercontent.com/shopyourway/dynamo/master/logo.jpg)
 Dynamo generates an analytics javascript API based on a json file definition.
 
 When you report "simple pixels" to GA / MixPanel / Omniture you must implement in your analytics tracker layer all the dimensions and metrics index.
