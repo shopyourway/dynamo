@@ -2,12 +2,18 @@
   "name": "@shopyourway/dynamo",
   "description": "Generate a js API for analytics based on a json file containing the business actions to track",
   "license": "MIT",
-  "version": "5.5.19",
-  "keywords": ["analytics", "code-generation", "omniture", "mixpanel", "tag manager", "google analytics"],
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/shopyourway/dynamo"
+  "version": "6.0.0",
+  "keywords": [
+    "analytics",
+    "code-generation",
+    "omniture",
+    "mixpanel",
+    "tag manager",
+    "google analytics"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shopyourway/analytics-api-generator"
   },
   "scripts": {
     "test": "jest"
@@ -16,7 +22,8 @@
     "testResultsProcessor": "jest-teamcity-reporter"
   },
   "dependencies": {
-    "camel-case": "3.0.0"
+    "camel-case": "3.0.0",
+    "pascal-case": "2.0.1"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.2.2",
