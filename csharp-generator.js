@@ -15,7 +15,7 @@ function createCsharpFunction(functionName, functionMetadata) {
     if (eventType === 'pageview')
         return '';
 
-    return `\t\tpublic static Dictionary<string, string> ${pascalCase(functionName)}(${formatCsharpParameters(functionMetadata.parameters).join(', ')}) 
+    return `\t\tpublic Dictionary<string, string> ${pascalCase(functionName)}(${formatCsharpParameters(functionMetadata.parameters).join(', ')}) 
         {
             return new Dictionary<string, string> 
             {
