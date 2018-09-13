@@ -10,6 +10,7 @@ namespace Ohio.Analytics
             {
                 {"eventAction", "Add To Catalog"},
 				{"entityType", entityType},
+				{"products", $"[ {productId} ]"},
 				{"engagementMetric", "1"},
 				{"addToCatalogMetric", "1"}
             };

@@ -41,7 +41,7 @@ function formatCsharpAssignment(dimensions, key) {
 
     var value =  dimensions[key];
     if(Array.isArray(value)) {
-        return `[ ${value.map(formatCsharpAssignmentValue).join(', ')} ]`;
+        return `$"[ {${value.map(formatCsharpAssignmentValue).join(', ')}} ]"`;
     }
     return formatCsharpAssignmentValue(value);
 }

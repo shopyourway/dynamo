@@ -11,7 +11,8 @@
       },
       "dimensions": {
         "eventAction": "Add To Catalog",
-        "entityType": "{{entityType}}"
+        "entityType": "{{entityType}}",
+        "products": [ "{{productId}}" ]
       },
       "metrics": [ "engagementMetric", "addToCatalogMetric" ],
       "eventType": "event"
