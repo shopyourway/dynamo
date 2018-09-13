@@ -15,9 +15,9 @@ function createCsharpFunction(functionName, functionMetadata) {
     if (eventType === 'pageview')
         return '';
 
-    return `\t\tpublic Dictionary<string, string> ${pascalCase(functionName)}(${formatCsharpParameters(functionMetadata.parameters).join(', ')}) 
+    return `\t\tpublic Dictionary<string, string> ${pascalCase(functionName)}(${formatCsharpParameters(functionMetadata.parameters).join(',')})
         {
-            return new Dictionary<string, string> 
+            return new Dictionary<string, string>
             {
                 ${setCsharpDimensions(functionMetadata)}
             };
@@ -32,12 +32,12 @@ function setCsharpDimensions(functionMetadata) {
     const { dimensions } = functionMetadata;
     const { metrics } = functionMetadata;
 
-    return Object.keys(dimensions).concat(metrics).map(key => `{"${key}", "${formatCsharpAssignment(dimensions, key)}"}`).join(',\n\t\t\t\t');
+    return Object.keys(dimensions).concat(metrics).map(key => `{"${key}", ${formatCsharpAssignment(dimensions, key)}}`).join(',\n\t\t\t\t');
 }
 
 function formatCsharpAssignment(dimensions, key) {
     if (typeof (dimensions[key]) === 'undefined')
-        return '1';
+        return '"1"';
 
     var value =  dimensions[key];
     if(Array.isArray(value)) {
@@ -50,5 +50,5 @@ function formatCsharpAssignmentValue(value) {
     if (value.startsWith('{{'))
         return value.replace(/{{/g, '').replace(/}}/g, '');
 
-    return value;
+    return `"${value}"`;
 }

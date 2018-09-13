@@ -1,0 +1,16 @@
+using System.Collections.Generic;
+
+namespace Ohio.Analytics
+{
+	public static class UserAnalytics
+	{
+  		public Dictionary<string, string> AddToCatalog(string entityType)
+        {
+            return new Dictionary<string, string>
+            {
+                {"eventAction", "Add To Catalog"},
+				{"entityType", entityType},
+				{"engagementMetric", "1"},
+				{"addToCatalogMetric", "1"}
+            };
+        }

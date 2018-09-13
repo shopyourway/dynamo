@@ -2,7 +2,7 @@
   "name": "@shopyourway/dynamo",
   "description": "Generate a js API for analytics based on a json file containing the business actions to track",
   "license": "MIT",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "keywords": [
     "analytics",
     "code-generation",
