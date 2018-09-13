@@ -13,6 +13,7 @@ export function addToCatalog(entityType) {
 
   eventData.eventAction = `Add To Catalog`;
   eventData.entityType = `${entityType}`;
+  eventData.products = [ `${productId}` ];
   eventData.engagementMetric = `1`;
   eventData.addToCatalogMetric = `1`;
   tagManagerReporter.link(eventData);

@@ -15,4 +15,3 @@ namespace Ohio.Analytics
 				{"addToCatalogMetric", "1"}
             };
         }
-  

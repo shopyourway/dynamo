@@ -17,7 +17,7 @@ test('Analytics lib generator should generate the js file correctly', () => {
 });
 
 test('Analytics lib generator should generate the c# file correctly', () => {
-    let expectedResult = fs.readFileSync(__dirname + `/expected-result-csharp.txt`, 'utf8');
-    let output = generate(metadata, { importStatements: importStatementsCsharp, language: 'csharp' });
+    let expectedResult = fs.readFileSync(__dirname + `/expected-result-csharp.txt`, 'utf8').trim();
+    let output = generate(metadata, { importStatements: importStatementsCsharp, language: 'csharp' }).trim();
     expect(output).toBe(expectedResult);
 });
