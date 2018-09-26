@@ -32,12 +32,22 @@ function createFunction(functionName, functionMetadata) {
 
   ${setDimensions(functionMetadata)}
   ${setMetrics(functionMetadata)}
-  tagManagerReporter.${eventTypeFunctionName}(eventData);
+  tagManagerReporter.${eventTypeFunctionName}(${buildReporterParams(eventType)});
 }`;
 }
 
+function buildReporterParams(eventType) {
+    if (eventType === 'event')
+        return `eventData, callback`;
+
+    return 'eventData';
+}
+
 function formatParameters(parameters) {
-    return Object.keys(parameters || {});
+    let returnedParameters = Object.keys(parameters || {});
+    returnedParameters.push('callback');
+
+    return returnedParameters;
 }
 
 function setDimensions(functionMetadata) {

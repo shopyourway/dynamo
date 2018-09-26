@@ -8,7 +8,7 @@ var actionsValues = {
   "Add To Catalog": 1
   };
 
-export function addToCatalog(entityType) {
+export function addToCatalog(entityType, callback) {
   const eventData = {};
 
   eventData.eventAction = `Add To Catalog`;
@@ -16,7 +16,7 @@ export function addToCatalog(entityType) {
   eventData.products = [ `${productId}` ];
   eventData.engagementMetric = `1`;
   eventData.addToCatalogMetric = `1`;
-  tagManagerReporter.link(eventData);
+  tagManagerReporter.link(eventData, callback);
 };
 
 export function myDummyFunction() {
