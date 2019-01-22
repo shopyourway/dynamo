@@ -18,18 +18,11 @@
   "scripts": {
     "test": "jest"
   },
-  "jest": {
-    "testResultsProcessor": "jest-teamcity-reporter"
-  },
   "dependencies": {
     "camel-case": "3.0.0",
     "pascal-case": "2.0.1"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^3.2.2",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.4.1",
-    "jest": "^21.2.1",
-    "jest-teamcity-reporter": "^0.7.0"
+    "jest": "23.6.0"
   }
 }

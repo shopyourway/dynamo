@@ -5,8 +5,11 @@ const csharpGenerator = require('./csharp-generator');
 module.exports = function(metadata, settings) {
     let importStatements = settings.importStatements ? settings.importStatements : '';
     let footerFileContent = settings.footerFile ? fs.readFileSync(`${settings.footerFile}`, 'utf8') : '';
+    let generatedResult;
     if (settings.language === 'js')
-        return jsGenerator(importStatements, footerFileContent, metadata);
+        generatedResult = jsGenerator(importStatements, footerFileContent, metadata);
+    else
+        generatedResult = csharpGenerator(importStatements, footerFileContent, metadata);
 
-    return csharpGenerator(importStatements, footerFileContent, metadata);
+    return generatedResult.replace(/\r?\n/g, '\r\n');
 }
